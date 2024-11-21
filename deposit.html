@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าฝากเงิน</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .menu a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: #d1e7ff;
+        }
+
+        .content {
+            margin: 15px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .modal-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .modal-content button {
+            background-color: #dc3545;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #c82333;
+        }
+
+        .timer {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+
+            .menu a {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            button {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+
+            .modal-content img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="https://png.pngtree.com/png-clipart/20200222/ourlarge/pngtree-get-money-cartoon-png-image_2151914.jpg" alt="โลโก้">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="home.html">กลับสู่หน้าแรก</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>หน้าฝากเงิน</h1>
+        <p>กรุณากรอกข้อมูลการฝากเงินของคุณ</p>
+
+        <!-- Form ฝากเงิน -->
+        <form id="deposit-form" action="javascript:void(0);">
+            <label for="amount">จำนวนเงินที่ต้องการฝาก:</label>
+            <input type="number" id="amount" name="amount" required><br>
+
+            <label for="bank">เลือกบัญชีธนาคาร:</label>
+            <select id="bank" name="bank" required>
+                <option value="" disabled selected>-- กรุณาเลือกธนาคาร --</option>
+                <option value="kbank">ธนาคารกสิกรไทย</option>
+                <option value="scb">ธนาคารไทยพาณิชย์</option>
+                <option value="bbl">ธนาคารกรุงเทพ</option>
+                <option value="ktb">ธนาคารกรุงไทย</option>
+                <option value="bay">ธนาคารกรุงศรีอยุธยา</option>
+                <option value="tmb">ธนาคารทหารไทยธนชาต (ทีทีบี)</option>
+                <option value="uob">ธนาคารยูโอบี</option>
+                <option value="tisco">ธนาคารทิสโก้</option>
+                <option value="lhb">ธนาคารแลนด์ แอนด์ เฮ้าส์</option>
+                <option value="kkp">ธนาคารเกียรตินาคินภัทร</option>
+            </select><br><br>
+
+            <button type="submit">ยืนยันการฝากเงิน</button>
+        </form>
+
+        <!-- Modal QR Code -->
+        <div id="qrModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <h2>กรุณาสแกน QR Code เพื่อฝากเงิน</h2>
+                <img src="https://i.postimg.cc/KvJM9LxM/S-10731522.jpg" alt="QR Code">
+                <button onclick="closeModal()">ปิด</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 บริษัท XM ทุกสิทธิ์สงวน</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("deposit-form").onsubmit = function() {
+            // แสดง Modal QR code
+            document.getElementById("qrModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("qrModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

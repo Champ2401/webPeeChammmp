@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริหารการเงิน</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .menu a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: #d1e7ff;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+
+            .menu a {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="https://png.pngtree.com/png-clipart/20200222/ourlarge/pngtree-get-money-cartoon-png-image_2151914.jpg" alt="โลโก้">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="home.html">หน้าแรก</a>
+            <a href="deposit.html">ฝากเงิน</a>
+            <a href="financial-management.html">บริหารการเงิน</a>
+            <a href="promotions.html">โปรโมชั่น</a>
+            <a href="copy-trading.html">Copy Trading</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>บริหารการเงิน</h1>
+
+        <div class="card">
+            <h3>ยอดเงินคงเหลือ</h3>
+            <p>฿100.00</p>
+        </div>
+
+        <div class="card">
+            <h3>ฝากเงิน</h3>
+            <p>ทำการฝากเงินได้ง่าย ๆ ผ่านทางธนาคารต่าง ๆ</p>
+            <a href="deposit.html"><button>ไปที่หน้าฝากเงิน</button></a>
+        </div>
+
+        <div class="card">
+            <h3>ประวัติการทำรายการ</h3>
+            <p>ดูประวัติการทำรายการฝากและถอนเงินทั้งหมดของคุณ</p>
+            <a href="transaction-history.html"><button>ดูประวัติ</button></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 บริษัท XM ทุกสิทธิ์สงวน</p>
+    </div>
+
+</body>
+</html>

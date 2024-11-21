@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .menu a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: #d1e7ff;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .timer {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+
+            .menu a {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;
+                padding: 10px;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="https://png.pngtree.com/png-clipart/20200222/ourlarge/pngtree-get-money-cartoon-png-image_2151914.jpg" alt="โลโก้">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="home.html">หน้าแรก</a>
+            <a href="deposit.html">ฝากเงิน</a>
+            <a href="financial-management.html">บริหารการเงิน</a>
+            <a href="promotions.html">โปรโมชั่น</a>
+            <a href="copy-trading.html">Copy Trading</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>ยินดีต้อนรับสู่หน้าแรก</h1>
+        <div class="card">
+            <img src="https://e7.pngegg.com/pngimages/858/714/png-clipart-money-bag-computer-icons-money-hand-cartoon.png" alt="Deposit Icon">
+            <h3>ฝากเงิน</h3>
+            <p>ทำการฝากเงินได้ง่าย ๆ</p>
+            <a href="deposit.html"><button>ฝากเงินตอนนี้</button></a>
+        </div>
+
+        <div class="card">
+            <img src="https://png.pngtree.com/png-clipart/20220901/ourmid/pngtree-money-fight-cartoon-png-image_6132452.png" alt="Financial Management Icon">
+            <h3>บริหารการเงิน</h3>
+            <p>จัดการการเงินของคุณอย่างมืออาชีพ</p>
+            <a href="financial-management.html"><button>ดูรายละเอียด</button></a>
+        </div>
+
+        <div class="card">
+            <img src="https://e7.pngegg.com/pngimages/490/274/png-clipart-promotion-advertising-promotions-hand-sports-equipment-thumbnail.png" alt="Promotions Icon">
+            <h3>โปรโมชั่น</h3>
+            <p>ข้อเสนอพิเศษสำหรับคุณ!</p>
+            <a href="promotions.html"><button>ดูโปรโมชั่น</button></a>
+        </div>
+
+        <div class="card">
+            <img src="https://png.pngtree.com/png-clipart/20240306/original/pngtree-man-investor-3d-png-image_14526428.png" alt="Copy Trading Icon">
+            <h3>Copy Trading</h3>
+            <p>ติดตามและคัดลอกการเทรดจากมืออาชีพ</p>
+            <a href="copy-trading.html"><button>เริ่มต้น Copy Trading</button></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 บริษัท XM ทุกสิทธิ์สงวน</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติการทำรายการ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .menu a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: #d1e7ff;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .history-table th, .history-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .history-table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+
+            .menu a {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .history-table th, .history-table td {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="https://png.pngtree.com/png-clipart/20200222/ourlarge/pngtree-get-money-cartoon-png-image_2151914.jpg" alt="โลโก้">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="home.html">หน้าแรก</a>
+            <a href="deposit.html">ฝากเงิน</a>
+            <a href="financial-management.html">บริหารการเงิน</a>
+            <a href="promotions.html">โปรโมชั่น</a>
+            <a href="copy-trading.html">Copy Trading</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>ประวัติการทำรายการ</h1>
+
+        <div class="card">
+            <h3>เวลาทำการ</h3>
+            <p>จันทร์ - ศุกร์: 09:00 AM - 06:00 PM</p>
+            <p>เสาร์ - อาทิตย์: ปิดทำการ</p>
+        </div>
+
+        <div class="card">
+            <h3>ยอดเงินคงเหลือ</h3>
+            <p>฿100.00</p>
+        </div>
+
+        <!-- Transaction History Table -->
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>วันที่</th>
+                    <th>ประเภท</th>
+                    <th>ยอดเงิน</th>
+                    <th>สถานะ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example of 20 transaction rows -->
+                <tr>
+                    <td>2024-11-01</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿500.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-02</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿200.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-03</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿150.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-04</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿100.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-05</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿300.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <!-- Repeat for more transaction records -->
+                <tr>
+                    <td>2024-11-06</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿400.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-07</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿250.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-08</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿350.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-09</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿450.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-10</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿550.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-11</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿600.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-12</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿700.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-13</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿800.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-14</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿900.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-15</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿1000.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-16</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿1100.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-17</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿1200.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-18</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿1300.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-19</td>
+                    <td>ฝากเงิน</td>
+                    <td>฿1400.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+                <tr>
+                    <td>2024-11-20</td>
+                    <td>ถอนเงิน</td>
+                    <td>฿1500.00</td>
+                    <td>สำเร็จ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 บริษัท XM ทุกสิทธิ์สงวน</p>
+    </div>
+
+</body>
+</html>

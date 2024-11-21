@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรโมชั่น</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .menu a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: #d1e7ff;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .promo-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .promo-card h3 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .promo-card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .promo-card .timer {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .promo-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+
+            .menu a {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .promo-card {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="https://png.pngtree.com/png-clipart/20200222/ourlarge/pngtree-get-money-cartoon-png-image_2151914.jpg" alt="โลโก้">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="home.html">หน้าแรก</a>
+            <a href="deposit.html">ฝากเงิน</a>
+            <a href="financial-management.html">บริหารการเงิน</a>
+            <a href="promotions.html">โปรโมชั่น</a>
+            <a href="copy-trading.html">Copy Trading</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>โปรโมชั่นที่มีระยะเวลาจำกัด</h1>
+
+        <div class="promo-card">
+            <h3>ข้อเสนอจะสิ้นสุดลงในอีก:</h3>
+            <div class="timer" id="timer">
+                09 วัน 19h : 37m : 44s
+            </div>
+            <p>เงินคืนไม่จำกัด</p>
+            <p>8 ตุลาคม 2024 - 30 พฤศจิกายน 2024</p>
+            <p><a href="#">อ่านเพิ่มเติม</a></p>
+            <img src="https://cloud.xm-cdn.com/static/promos-api/2024/US_Elections_Global_Oct24/global-promo-hero-en.png" alt="โปรโมชั่น">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 บริษัท XM ทุกสิทธิ์สงวน</p>
+    </div>
+
+    <script>
+        // Timer countdown function
+        const timerElement = document.getElementById('timer');
+        let endDate = new Date('November 30, 2024 00:00:00').getTime();
+
+        setInterval(function() {
+            let now = new Date().getTime();
+            let timeLeft = endDate - now;
+            
+            let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            timerElement.innerHTML = `${days} วัน ${hours}h : ${minutes}m : ${seconds}s`;
+
+            if (timeLeft < 0) {
+                clearInterval();
+                timerElement.innerHTML = "โปรโมชั่นสิ้นสุดแล้ว";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
